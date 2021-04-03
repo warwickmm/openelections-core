@@ -23,7 +23,6 @@ jobs:
       run: |
         pip install pipenv
         pipenv install --dev
-        pipenv shell
 
     - name: Checkout source
       uses: actions/checkout@v2.3.4
