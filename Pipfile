@@ -4,10 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-bba4a4a = {path = ".",editable = true}
 "urllib3" = ">=1.2.3"
 "requests" = ">=2.20.0"
-openelections-core = {path = "."}
+openelections-core = {path = ".", editable = true}
 
 [dev-packages]
 mock = "*"
