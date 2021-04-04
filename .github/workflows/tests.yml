@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install pipenv
-        pipenv install --dev -e .
+        pipenv install --dev --ignore-pipfile -e .
 
     - name: Run unit tests
       run: pipenv run nosetests
