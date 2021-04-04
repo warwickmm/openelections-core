@@ -22,10 +22,12 @@ jobs:
     - name: Check out source
       uses: actions/checkout@v2.3.4
 
-    - name: Install dependencies
+    - name: Configure environment
       run: |
         pip install pipenv==2018.11.26
         pipenv install --dev
+        cp settings.py.tmplt settings.py
+        export OPENELEX_SETTINGS=$(pwd)/settings.py
 
     - name: Run unit tests
       run: pipenv run nosetests
