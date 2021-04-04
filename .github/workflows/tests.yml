@@ -24,7 +24,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install pipenv
+        pip install pipenv==2018.11.26
         pipenv install --dev -e openelections-core
 
     - name: Run unit tests
